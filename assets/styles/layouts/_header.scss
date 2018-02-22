@@ -1,0 +1,20 @@
+header {
+	&.banner {
+		background-color: #203467;
+		height: 80px;
+		.container {
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			nav {
+				ul.nav {
+					display: flex;
+					li {
+						margin: 0 10px;
+					}
+				}
+			}
+		}
+	}
+}
