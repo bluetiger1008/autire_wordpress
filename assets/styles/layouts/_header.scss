@@ -7,11 +7,19 @@ header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			a.brand {
+				img {
+					height: 50px;
+				}
+			}
 			nav {
 				ul.nav {
 					display: flex;
 					li {
 						margin: 0 10px;
+						a {
+							color: white;
+						}
 					}
 				}
 			}

@@ -1,0 +1,108 @@
+section.contact {
+	margin-top: -300px;
+	margin-bottom: 100px;
+	.container {
+		.contact-wrapper {
+			width: 85%;
+			margin: 0 auto;
+			h1 {
+				margin-bottom: 48px;
+				font-size: 56px;
+				line-height: 68px;
+				color: #242424;
+			}
+			.contact-form {
+				background-color: #F8F8F8;
+				padding: 50px 60px;
+				min-height: 500px;
+				border-radius: 3px;
+				box-shadow: 0 0 24px 0 rgba(0,0,0,0.1);
+				h2 {
+					color: #98989A;
+					font-size: 20px;
+					line-height: 24px;
+					margin-bottom: 30px;
+					text-transform: uppercase;
+				}
+				h3 {
+					color: #ed5427;
+					font-weight: bold;
+					font-size: 18px;
+					letter-spacing: 1px;
+					line-height: 22px;
+					margin-bottom: 20px;
+					text-transform: uppercase;
+					&:not(:first-child) {
+						margin-top: 60px;
+					}
+				}
+				.form {
+					padding-right: 60px;
+					input, textarea {
+						width: 100%;
+					}
+					input {
+						height: 30px;
+						border-radius: 3px;
+						border: 1px solid #c7c4c4;
+						padding: 0 15px;
+						&[type="submit"] {
+					    width: 150px;
+					    height: 40px;
+					    color: white;
+					    background-color: #ed5427;
+					    font-size: 20px;
+					    text-transform: uppercase;
+					    border-radius: 5px;
+					    border: none;
+						}
+					}
+				}
+				.contact-information {
+					padding-left: 60px;
+					p {
+						color: #242424;
+						font-size: 16px;
+						line-height: 25px;
+					}
+				}
+			}
+		}
+	}
+	@include touch {
+		.container {
+			.contact-wrapper {
+				.contact-form {
+					.form {
+						padding-right: 30px;
+					}
+					.contact-information {
+						padding-left: 30px;
+					}
+				}	
+			}
+		}
+	}
+	@include mobile {
+		.container {
+			.contact-wrapper {
+				width: 100%;
+				h1 {
+			    font-size: 40px;
+			    line-height: 40px;
+			    margin-bottom: 30px;
+				}
+				.contact-form {
+					padding: 20px;
+					.form {
+						padding-right: 0;
+					}
+					.contact-information {
+						padding-left: 0;
+						margin-top: 30px;
+					}
+				}
+			}
+		}
+	}
+}
