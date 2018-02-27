@@ -1,0 +1,73 @@
+.slider{
+    &.testimonials-slider {
+        width: 900px;
+        position: relative;
+        margin: 50px auto;
+        .frame {
+            /**
+             * (optional) wrapper width, specifies width of the slider frame.
+             */
+            width: 100%;
+            position: relative;
+            font-size: 0;
+            line-height: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            .slides {
+                display: inline-flex;
+                height: 300px;
+                li {
+                    position: relative;
+                    height: 100%;
+                    display: inline-flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    /**
+                     * (optional) if the content inside the slide element has a defined size.
+                     */
+                    width: 300px;
+                    padding: 0 10px;
+                    .testimonial {
+                        border: 1px solid grey;
+                        border-radius: 5px;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        font-size: 20px;
+                        line-height: 24px;
+                        padding: 20px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .content {
+                            .testimonial-image {
+                                height: 100px;
+                                img {
+                                    max-height: 70px;
+                                    width: auto;
+                                }    
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            display: block;
+            cursor: pointer;
+            img {
+                width: 25px;
+                height: 20px;
+            }
+        }   
+        .next {
+            right: -50px;
+        }
+        .prev {
+            left: -50px;
+        }
+    }
+}

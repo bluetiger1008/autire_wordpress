@@ -86,7 +86,8 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_page_template('template-custom.php'),
-    is_page_template('template-contactus.php')
+    is_page_template('template-contactus.php'),
+    is_page_template('template-testimonials.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -103,6 +104,7 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script('sage/lory_js', Assets\asset_path('scripts/lory.js'));
   wp_enqueue_script('sage/googlemap_js', 'https://maps.googleapis.com/maps/api/js');
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

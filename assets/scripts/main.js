@@ -73,6 +73,18 @@
 
         google.maps.event.addDomListener(window, 'load', init);
       }
+    },
+    'testimonials': {
+      init: function() {
+        var testimonials_slider  = document.querySelector('.testimonials-slider');
+
+        if(testimonials_slider) {
+          lory(testimonials_slider, {
+            infinite: 3,
+            slidesToScroll: 1
+          });  
+        }  
+      }
     }
   };
 

@@ -17,6 +17,9 @@
         "scripts/customizer.js"
       ]
     },
+    "lory.js": {
+      "bower": ["lory"]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }
