@@ -8,6 +8,15 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.6.2",
-    "lory": "^2.4.1"
+    "lory": "^2.4.1",
+    "font-awesome": "fontawesome#^4.7.0"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
+    }
   }
 }

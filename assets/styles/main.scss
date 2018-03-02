@@ -2,17 +2,23 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
 // endbower
 
 // bower:sass
 @import "../../bower_components/bulma/bulma.sass";
 // endbower
 
+@import "common/fonts";
 @import "common/global";
+@import "common/mixin";
 @import "components/buttons";
 @import "components/contact";
 @import "components/hero";
 @import "components/slider";
+@import "components/article";
+@import "components/pinned-article";
+@import "components/posts-navigation";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

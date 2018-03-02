@@ -1,0 +1,32 @@
+.pinned-article {
+	.article-image {
+		padding-right: 30px;
+		figure {
+        margin: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }	
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		p.categories {
+			margin-top: 45px;
+			margin-bottom: 0;
+			a {
+	      font-weight: bold;
+				@include articleCategory(16px);
+			}
+		}
+		a.post-title {
+			@include articleTitleLink(34px, 42px);
+		}
+		p.post-content {
+			margin-top: 20px;
+      color: #4A4A4A;
+      font-size: 16px;
+      line-height: 26px;
+		}
+	}
+}
