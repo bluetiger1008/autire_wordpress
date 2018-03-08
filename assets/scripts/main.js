@@ -85,6 +85,18 @@
           });  
         }  
       }
+    },
+    'our_professionals': {
+      init: function() {
+        var members_slider = document.querySelector('.members-slider');
+
+        if(members_slider) {
+          lory(members_slider, {
+            infinite: 3,
+            slidesToScroll: 1
+          });
+        }
+      }
     }
   };
 

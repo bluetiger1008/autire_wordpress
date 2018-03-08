@@ -88,7 +88,8 @@ function display_sidebar() {
     is_home(),
     is_page_template('template-custom.php'),
     is_page_template('template-contactus.php'),
-    is_page_template('template-testimonials.php')
+    is_page_template('template-testimonials.php'),
+    is_page_template('template-professionals.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

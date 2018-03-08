@@ -1,32 +1,38 @@
 .slider{
-    &.testimonials-slider {
-        width: 900px;
+    width: 1200px;
+    position: relative;
+    margin: 50px auto;
+    .frame {
+        /**
+         * (optional) wrapper width, specifies width of the slider frame.
+         */
+        width: 100%;
         position: relative;
-        margin: 50px auto;
-        .frame {
-            /**
-             * (optional) wrapper width, specifies width of the slider frame.
-             */
-            width: 100%;
-            position: relative;
-            font-size: 0;
-            line-height: 0;
-            overflow: hidden;
-            white-space: nowrap;
-            .slides {
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        .slides {
+            display: inline-flex;
+            li {
+                position: relative;
+                height: 100%;
                 display: inline-flex;
+                align-items: flex-start;
+                justify-content: center;
+                /**
+                 * (optional) if the content inside the slide element has a defined size.
+                 */
+                width: 400px;
+                padding: 0 10px;
+            }
+        } 
+    }
+    &.testimonials-slider {
+        .frame {
+            .slides {
                 height: 300px;
                 li {
-                    position: relative;
-                    height: 100%;
-                    display: inline-flex;
-                    align-items: flex-start;
-                    justify-content: center;
-                    /**
-                     * (optional) if the content inside the slide element has a defined size.
-                     */
-                    width: 300px;
-                    padding: 0 10px;
                     .testimonial {
                         border: 1px solid grey;
                         border-radius: 5px;
@@ -39,7 +45,7 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        .content {
+                        .wrapper {
                             .testimonial-image {
                                 height: 100px;
                                 img {
@@ -50,24 +56,70 @@
                         }
                     }
                 }
-            } 
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            margin-top: -10px;
-            display: block;
-            cursor: pointer;
-            img {
-                width: 25px;
-                height: 20px;
             }
-        }   
-        .next {
-            right: -50px;
         }
-        .prev {
-            left: -50px;
+    }
+    &.members-slider {
+        margin: 100px auto;
+        .frame {
+            .slides {
+                li {
+                    .member {
+                        padding-top: 50px;
+                        font-size: 18px;
+                        line-height: 21px;
+                        text-align: center;
+                        .wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .member-name {
+                                margin: 20px 0;
+                                font-size: 30px;
+                                font-weight: bold;
+                            }
+                            .member-image {
+                                width: 250px;
+                                height: 250px;
+                                border-radius: 50%;
+                                background-color: #e8e8e8;
+                                display: flex;
+                                align-items: flex-end;
+                                justify-content: center;
+                                img {
+                                    height: 300px;
+                                    width: auto;
+                                }
+                            }
+                            .member-comment {
+                                white-space: pre-wrap;
+                                height: 120px;
+                            }
+                        }
+                        a.read-more {
+                            margin-top: 30px;
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
         }
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+        display: block;
+        cursor: pointer;
+        img {
+            width: 25px;
+            height: 20px;
+        }
+    }   
+    .next {
+        right: -50px;
+    }
+    .prev {
+        left: -50px;
     }
 }

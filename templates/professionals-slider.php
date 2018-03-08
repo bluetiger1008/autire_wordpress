@@ -1,20 +1,21 @@
 <div class="container">
     <?php 
     // the query
-    $wpb_all_query = new WP_Query(array('post_type'=>'testimonial', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
+    $wpb_all_query = new WP_Query(array('post_type'=>'members', 'post_status'=>'publish', 'posts_per_page'=>-1)); ?>
     <?php if ( $wpb_all_query->have_posts() ) : ?>
-    <div class="slider testimonials-slider">
+    <div class="slider members-slider">
         <div class="frame js_frame">
             <ul class="slides js_slides">
                 <!-- the loop -->
                 <?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
                     <li class="js_slide">
-                        <div class="testimonial">
+                        <div class="member">
                             <div class="wrapper">
-                                <div class="testimonial-image"><?php the_post_thumbnail(); ?></div>
-                                <div class="testimonial-comment"><?php the_content(); ?></div>
+                                <div class="member-image"><?php the_post_thumbnail(); ?></div>
+                                <div class="member-name"><?php the_title(); ?></div>
+                                <div class="member-comment"><?php echo wp_trim_words( get_the_content(), 15, $more = '… ' ); ?></div>
                             </div>
-                            <a>Read more</a>
+                            <a class="read-more">Read more</a>
                         </div>
                     </li>
                 <?php endwhile; ?>

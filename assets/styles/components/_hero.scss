@@ -1,8 +1,10 @@
 .hero {
-	height: 500px;
+	height: 400px;
 	position: relative;
+	background-position: center;
+	background-size: cover;
 	.hero-content {
-		margin-top: 200px;
+		margin-top: 100px;
 		h1 {
 			color: white;
 			font-size: 60px;

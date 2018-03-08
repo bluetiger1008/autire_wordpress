@@ -1,3 +1,10 @@
+a {
+    color: #ed5427;
+    &:hover {
+        color: #ed5427;
+    }
+}
+
 span.yellow-border-bar {
     border-top: 4px solid #203467;
     display: block;
