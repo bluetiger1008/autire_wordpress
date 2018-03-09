@@ -86,10 +86,13 @@ function display_sidebar() {
     is_404(),
     is_front_page(),
     is_home(),
+    is_single(),
     is_page_template('template-custom.php'),
     is_page_template('template-contactus.php'),
     is_page_template('template-testimonials.php'),
-    is_page_template('template-professionals.php')
+    is_page_template('template-professionals.php'),
+    is_page_template('template-introducing.php'),
+    is_page_template('template-pricing.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

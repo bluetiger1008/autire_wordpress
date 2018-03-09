@@ -1,0 +1,53 @@
+section {
+	&.single-article {
+		padding-top: 100px;
+		.summary {
+			display: flex;
+			flex-direction: column;
+			p.categories {
+				margin-bottom: 0;
+				a {
+		      font-weight: bold;
+					@include articleCategory(16px);
+				}
+			}
+			h1.post-title {
+				margin: 0;
+			}
+		}
+		.featured-image {
+			background-color: $bg-articlePhoto;
+			margin-top: 30px;
+			figure {
+				margin: 0;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+		}
+		.article-wrapper {
+			margin-top: -150px;
+			position: relative;
+			.article-content {
+				padding: 30px;
+				margin-bottom: 50px;
+				background-color: white;
+				p {
+					font-family: "Playfair Display";
+					font-size: 20px;
+					line-height: 33px;
+					color: #242424;
+				}
+				a {
+					color: $alizarin-crimson;
+					font-family: "Playfair Display";
+				}
+			}
+		}
+		@include mobile {
+			.article-wrapper {
+				margin-top: 0;
+			}
+		}
+	}
+}

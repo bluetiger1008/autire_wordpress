@@ -1,3 +1,7 @@
+body {
+    font-family: 'Trueno';
+}
+
 a {
     color: #ed5427;
     &:hover {
@@ -5,7 +9,7 @@ a {
     }
 }
 
-span.yellow-border-bar {
+span.border-bar {
     border-top: 4px solid #203467;
     display: block;
     position: relative;
@@ -51,4 +55,22 @@ span.yellow-border-bar {
             line-height: 14px;
         }
     }
+}
+
+.content-wrapper {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button {
+    &.is-flamingo {
+        margin-top: 30px;
+        background-color: $flamingo;
+        color: white;
+    }
+}
+
+.wp-content {
+    margin: 50px 0;
 }

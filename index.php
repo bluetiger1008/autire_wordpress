@@ -9,7 +9,7 @@
 
 		<?php if(!is_category()) {
 			get_template_part('templates/section', 'pinnedArticle');
-			echo '<span class="yellow-border-bar"></span>';
+			echo '<span class="border-bar"></span>';
 		}?>	
 
 		<div class="columns">

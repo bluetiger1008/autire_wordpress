@@ -6,10 +6,12 @@
 
 <?php get_template_part('templates/hero'); ?>
 <?php while (have_posts()) : the_post(); ?>
-	<div class="container">
-		<div class="content-wrapper">
-		  <?php the_content(); ?>
+	<section class="wp-content">
+		<div class="container">
+			<div class="content-wrapper">
+			  <?php the_content(); ?>
+			</div>
 		</div>
-	</div>
+	</section>
 <?php endwhile; ?>
 <?php get_template_part('templates/professionals', 'slider'); ?>
