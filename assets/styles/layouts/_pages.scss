@@ -1,3 +1,7 @@
+.wrap {
+	position: relative;
+}
+
 .contact-us {
 	#map {
 		height: 700px;
@@ -14,4 +18,34 @@
 	  	flex-wrap: wrap;
 	  }
 	}
+}
+
+.pricing {
+	position: relative;
+	p.down-content {
+		color: black;
+	}
+}
+
+.bg-top {
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	top: 0;
+}
+
+.template-content {
+	color: white;
+	h1, h3 {
+		color: white;
+	}
+}
+
+.white-box {
+	border-top: 5px solid $flamingo;
+  border-radius: 5px;
+  padding: 50px;
+  box-shadow: 0 0 24px rgba(0,0,0,.5);
+  background: white;
+  color: black;
 }

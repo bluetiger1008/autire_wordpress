@@ -92,7 +92,8 @@ function display_sidebar() {
     is_page_template('template-testimonials.php'),
     is_page_template('template-professionals.php'),
     is_page_template('template-introducing.php'),
-    is_page_template('template-pricing.php')
+    is_page_template('template-pricing.php'),
+    is_page_template('template-defaultpage.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);

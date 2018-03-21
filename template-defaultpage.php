@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Professionals Template
+ * Template Name: Default Page Template
  */
 ?>
 
@@ -10,11 +10,16 @@
 	<?php while (have_posts()) : the_post(); ?>
 		<section class="wp-content">
 			<div class="container">
-				<div class="content-wrapper">
-				  <?php the_content(); ?>
+				<div class="columns">
+					<div class="column is-12">
+						<h1><?php the_title(); ?></h1>
+						<div class="white-box">
+						  <?php the_content(); ?>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 	<?php endwhile; ?>
-	<?php get_template_part('templates/professionals', 'slider'); ?>
+	<?php get_template_part('templates/section','engageus'); ?>
 </div>

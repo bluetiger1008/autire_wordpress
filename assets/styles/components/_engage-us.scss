@@ -1,0 +1,19 @@
+section {
+	&.engage-us {
+		padding: 100px 0;
+		.engage-content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: auto;
+				height: 150px;
+				margin-right: 150px;
+			}
+			p {
+				font-size: 25px;
+				color: black;
+			}
+		}
+	}
+}

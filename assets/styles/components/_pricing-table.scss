@@ -5,14 +5,17 @@ section {
 	    border-top: 5px solid $flamingo;
 	    border-radius: 5px;
 	    padding: 30px;
-	    
+      box-shadow: 0 0 24px rgba(0,0,0,.5);
+      background: white;
+
 			.price {
 				display: flex;
 				justify-content: space-between;
 				padding: 10px 0;
 				border-bottom: 1px solid #ddd;
+				font-family: 'Open Sans';
 				.price-name {
-					color: #213566;
+					color: black;
 				}
 				.price-cost {
 					color: $flamingo;

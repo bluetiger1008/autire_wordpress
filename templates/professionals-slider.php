@@ -12,7 +12,22 @@
                         <div class="member">
                             <div class="wrapper">
                                 <div class="member-image"><?php the_post_thumbnail(); ?></div>
-                                <div class="member-name"><?php the_title(); ?></div>
+                                <div class="member-name">
+                                    <?php the_title(); ?>
+                                    <?php
+                                       $terms = get_the_terms( $post->ID , 'category' );
+                                       // Loop over each item since it's an array
+                                       if ( $terms != null ){
+                                        echo ', ';
+                                       foreach( $terms as $term ) {
+                                        // Print the name method from $term which is an OBJECT
+                                        print $term->name ;
+                                       }
+                                       // Get rid of the other data stored in the object, since it's not needed
+                                       unset($term);
+                                       }
+                                    ?>
+                                </div>
                                 <div class="member-comment"><?php echo wp_trim_words( get_the_content(), 15, $more = '… ' ); ?></div>
                             </div>
                             <a class="read-more">Read more</a>

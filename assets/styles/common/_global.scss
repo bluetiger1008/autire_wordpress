@@ -2,6 +2,17 @@ body {
     font-family: 'Trueno';
 }
 
+.content {
+    h1 {
+        font-size: 3em;
+    }
+}
+
+
+p {
+    font-family: 'Open Sans';
+}
+
 a {
     color: #ed5427;
     &:hover {
@@ -65,12 +76,16 @@ span.border-bar {
 
 .button {
     &.is-flamingo {
-        margin-top: 30px;
         background-color: $flamingo;
         color: white;
+        border-radius: 50px;
+        border: none;
+        height: 50px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
 .wp-content {
-    margin: 50px 0;
+    padding: 100px 0 50px;
 }

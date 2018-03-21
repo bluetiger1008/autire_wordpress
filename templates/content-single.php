@@ -11,14 +11,6 @@
         ?>
         </p>
         <h1 class="post-title"><?php the_title(); ?></h1>
-        <div class="meta-data">
-          <div class="meta-left">
-            <?php echo get_avatar( get_the_author_meta( 'ID' ), 48 ); ?>
-          </div>
-          <div class="meta-content">
-            <?php get_template_part('templates/entry-meta'); ?>
-          </div>
-        </div>
       </div>
       <div class="featured-image">
         <?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>

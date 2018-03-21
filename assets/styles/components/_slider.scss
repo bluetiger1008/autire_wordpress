@@ -60,12 +60,11 @@
         }
     }
     &.members-slider {
-        margin: 100px auto;
+        margin: 50px auto 100px;
         .frame {
             .slides {
                 li {
                     .member {
-                        padding-top: 50px;
                         font-size: 18px;
                         line-height: 21px;
                         text-align: center;
@@ -75,29 +74,32 @@
                             align-items: center;
                             .member-name {
                                 margin: 20px 0;
-                                font-size: 30px;
-                                font-weight: bold;
+                                font-size: 1.5rem;
+                                color: $flamingo;
                             }
                             .member-image {
                                 width: 250px;
                                 height: 250px;
                                 border-radius: 50%;
-                                background-color: #e8e8e8;
+                                overflow: hidden;
                                 display: flex;
-                                align-items: flex-end;
                                 justify-content: center;
                                 img {
-                                    height: 300px;
-                                    width: auto;
+                                    width: 100%;
+                                    height: 100%;
                                 }
                             }
                             .member-comment {
                                 white-space: pre-wrap;
                                 height: 120px;
+                                color: black;
+                                font-size: 1rem;
+                                font-family: 'Open Sans';
                             }
                         }
                         a.read-more {
                             display: inline-block;
+                            font-size: 1rem;
                         }
                     }
                 }

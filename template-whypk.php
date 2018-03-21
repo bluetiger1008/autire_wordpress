@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Introducing Autire Template
+ * Template Name: Why Pk Template
  */
 ?>
 
@@ -11,9 +11,6 @@
 			<div class="columns">
 				<div class="column is-8 is-offset-2">
 				  <?php the_content(); ?>
-				  <div class="has-text-centered">
-					  <a class="button is-flamingo">Engage us today</a>
-					</div>
 				</div>
 			</div>
 		</div>
