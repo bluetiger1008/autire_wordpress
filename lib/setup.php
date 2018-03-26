@@ -93,7 +93,8 @@ function display_sidebar() {
     is_page_template('template-professionals.php'),
     is_page_template('template-introducing.php'),
     is_page_template('template-pricing.php'),
-    is_page_template('template-defaultpage.php')
+    is_page_template('template-defaultpage.php'),
+    is_page_template('template-audits.php')
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -111,6 +112,6 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
   wp_enqueue_script('sage/lory_js', Assets\asset_path('scripts/lory.js'));
-  wp_enqueue_script('sage/googlemap_js', 'https://maps.googleapis.com/maps/api/js');
+  wp_enqueue_script('sage/googlemap_js', 'https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCCvKakr2hakrOVci8rupucTcZzDa6ucHI');
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

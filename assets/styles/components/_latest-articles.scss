@@ -1,0 +1,95 @@
+section.latest-articles {
+    padding-top: 200px;
+    padding-bottom: 140px;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+    background-color: #E6E6E6;
+    .container {
+        position: relative;
+        .articles-header {
+            padding: 0 30px;
+            margin-bottom: 40px;
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        .anchor-view-all {
+            position: absolute;
+            top: 0;
+            right: 40px;
+        }
+    }
+    
+    @include mobile {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        .articles-header {
+            padding: 0 10px !important;
+        }
+        .anchor-view-all {
+            position: relative !important;
+            text-align: center;
+            right: 0 !important;
+            margin-top: 28px;
+        }
+    }
+}
+
+section.latest-articles-rows {
+    margin: 40px 0 30px;
+    h1 {
+        margin-top: 60px;
+        margin-bottom: 40px;
+        font-size: 34px;
+        line-height: 1.2em;
+    }
+    .article {
+        display: flex;
+        margin-bottom: 30px;
+        align-items: center;
+        .article-photo {
+            width: 270px;
+            height: 140px;
+            background-size: cover;
+            background-position: center;
+            &.empty {
+                background-color: #a9a9a9;
+            }
+        }
+        &-summary {
+            margin-left: 30px;
+            flex: 1;
+            p {
+                margin-bottom: 0;
+                a {
+                    color: #D8252F;    
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-family: $fontTrueno;
+                    font-weight: 800;
+                    &:hover {
+                        color: #D8252F;
+                    }
+                }
+            }
+            h2 {
+                font-size: 28px;
+                line-height: 32px;
+                color: #302F35;
+                margin: 0;
+            }
+        }
+    }
+    @include mobile {
+        .article {
+            flex-direction: column;
+            img.article-image {
+                width: 100%;
+                height: auto;
+            }
+            &-summary {
+                flex: 1;
+                margin-left: 0;
+            }
+        }
+    }
+}

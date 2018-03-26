@@ -16,3 +16,25 @@
     box-shadow: $top $left $blur $color;
   }
 }
+@mixin textLink() {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  border-bottom: 2px solid $lightening-yellow;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    height: 2px;
+    left: 0;
+    width: 0;
+    background-color: $alizarin-crimson;
+    transition: width .5s cubic-bezier(.23,1,.32,1)
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+.modal {
+	z-index: 102;
+	.modal-card, .modal-content {
+		width: 800px;
+	}
+	.modal-card {
+		&-head {
+			justify-content: flex-end;
+			border-bottom: none;
+			padding: 10px;
+		}
+		&-body {
+			padding: 30px;
+			color: #000;
+			h3 {
+				color: $flamingo;
+				font-size: 25px;
+			}
+			.fsBody {
+				background-color: white !important;
+				.fsForm {
+					margin: 0;
+					.fsSubmit {
+						margin-top: 0;
+						padding: 0;
+					}
+				}
+			}
+			ul {
+				li {
+					font-family: 'Open Sans';
+				}
+			}
+		}
+	}	
+	@include mobile {
+		.modal-card {
+			&-body {
+				padding: 20px;
+			}
+		}
+	}
+}

@@ -8,6 +8,7 @@ section {
 				margin-bottom: 0;
 				a {
 		      font-weight: bold;
+		      font-family: 'Trueno';
 					@include articleCategory(16px);
 				}
 			}
@@ -32,7 +33,7 @@ section {
 				padding: 30px;
 				margin-bottom: 50px;
 				background-color: white;
-				p {
+				p, ul {
 					font-family: "Playfair Display";
 					font-size: 20px;
 					line-height: 33px;

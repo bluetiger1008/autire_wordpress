@@ -89,3 +89,14 @@ span.border-bar {
 .wp-content {
     padding: 100px 0 50px;
 }
+
+.anchor-view-all {
+    a {
+        @include textLink();
+        color: black;
+    }
+    img {
+        margin-left: 15px;
+        width: 14px;
+    }
+}

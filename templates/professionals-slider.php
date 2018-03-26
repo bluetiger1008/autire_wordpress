@@ -30,9 +30,10 @@
                                 </div>
                                 <div class="member-comment"><?php echo wp_trim_words( get_the_content(), 15, $more = '… ' ); ?></div>
                             </div>
-                            <a class="read-more">Read more</a>
+                            <a class="read-more openModal" data-id="<?php the_ID(); ?>">Read more</a>
                         </div>
                     </li>
+
                 <?php endwhile; ?>
                 <!-- end of the loop -->
             </ul>
@@ -49,3 +50,18 @@
         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
     <?php endif; ?>
 </div>
+
+<?php while ( $wpb_all_query->have_posts() ) : $wpb_all_query->the_post(); ?>
+    <div id="member-<? the_ID(); ?>" class="modal member-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+            <h3><?php the_title(); ?></h3>
+            <?php the_content();?>
+        </section>
+      </div>
+    </div>
+<?php endwhile; ?>

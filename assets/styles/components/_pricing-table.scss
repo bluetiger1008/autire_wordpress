@@ -1,6 +1,5 @@
 section {
 	&.price {
-		margin: 50px 0;
 		.pricing-table {
 	    border-top: 5px solid $flamingo;
 	    border-radius: 5px;
@@ -23,4 +22,8 @@ section {
 			}
 		}
 	}
+}
+
+.price-second-content {
+	margin-top: 50px;
 }

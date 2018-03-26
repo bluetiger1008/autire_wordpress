@@ -19,6 +19,9 @@
     'common': {
       init: function() {
         // JavaScript to be fired on all pages
+        $('.delete').click(function() {
+          $(".modal.is-active").removeClass('is-active'); 
+        });
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -28,6 +31,8 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+        $(".read-post").on
+          ("click", function(){ console.log('openmodal'); $("#audit-" + $(this).attr('data-id')).addClass('is-active');});
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS
@@ -49,7 +54,7 @@
                 zoom: 16,
 
                 // The latitude and longitude to center the map (always required)
-                center: new google.maps.LatLng(32.802532, -96.800898),
+                center: new google.maps.LatLng(32.980019, -96.83133140000001),
 
                 // How you would like to style the map. 
                 // This is where you would paste any style found on Snazzy Maps.
@@ -80,6 +85,26 @@
         google.maps.event.addDomListener(window, 'load', init);
       }
     },
+    'audits': {
+      init: function() {
+        $('accordian-header').not('.title').on('click', function(){
+          /* jshint ignore:start */
+          var that = $(this),
+              parent = that.parent(),
+              closeDiv = that.siblings('div'),
+              contentHeight = closeDiv.children('accordian-article').outerHeight();
+          
+          that.parents('section').first().toggleClass('open');
+          (closeDiv.height() === 0) ? closeDiv.height(contentHeight) : closeDiv.height(contentHeight).height(0);
+          closeDiv.one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',   
+            function(e) {
+              var that = $(this);
+              (that.css('height') !== '0px') ? that.css('height','auto') : that.css('height', '0px' );
+            });
+          /* jshint ignore:end */
+        });
+      }
+    },
     'testimonials': {
       init: function() {
         var testimonials_slider  = document.querySelector('.testimonials-slider');
@@ -90,6 +115,9 @@
             slidesToScroll: 1
           });  
         }  
+
+        $(".read-testimonial").on
+          ("click", function(){ console.log('openmodal'); $("#testimonial-" + $(this).attr('data-id')).addClass('is-active');});
       }
     },
     'our_professionals': {
@@ -102,6 +130,9 @@
             slidesToScroll: 1
           });
         }
+
+        $(".openModal").on
+          ("click", function(){ console.log('openmodal'); $("#member-" + $(this).attr('data-id')).addClass('is-active');});
       }
     }
   };

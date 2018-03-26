@@ -7,6 +7,7 @@
         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);
       endif;
       ?>
+      <a href="<?= esc_url(home_url('/')); ?>contact-us/" class="btn-engage">Engage us</a>
     </nav>
   </div>
 </header>

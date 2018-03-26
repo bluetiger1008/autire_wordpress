@@ -2,6 +2,9 @@
     width: 1200px;
     position: relative;
     margin: 50px auto;
+    .testimonials & {
+        width: 1600px;
+    }
     .frame {
         /**
          * (optional) wrapper width, specifies width of the slider frame.
@@ -28,10 +31,27 @@
             }
         } 
     }
+    &.js_testimonial_slider {
+        width: 100%;
+        margin: 0;
+        .frame {
+            .slides {
+                display: block;
+                li {
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-top: 0;
+                    width: 100%;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
     &.testimonials-slider {
         .frame {
             .slides {
-                height: 300px;
+                height: 400px;
                 li {
                     .testimonial {
                         border: 1px solid grey;
@@ -45,11 +65,12 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        .wrapper {
+                        .content {
                             .testimonial-image {
                                 height: 100px;
                                 img {
-                                    max-height: 70px;
+                                    min-height: 70px;
+                                    max-height: 90px;
                                     width: auto;
                                 }    
                             }

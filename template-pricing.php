@@ -55,7 +55,7 @@
 		</div>
 	</section>
 
-	<section class="wp-content">
+	<section class="price-second-content">
 		<div class="container">
 			<div class="columns">
 				<div class="column is-8 is-offset-2">

@@ -10,8 +10,8 @@
 // endbower
 
 @import "common/fonts";
-@import "common/global";
 @import "common/mixin";
+@import "common/global";
 @import "components/buttons";
 @import "components/contact";
 @import "components/hero";
@@ -22,6 +22,12 @@
 @import "components/pricing-table";
 @import "components/single-article";
 @import "components/engage-us";
+@import "components/latest-articles";
+@import "components/testimonial";
+@import "components/all-testimonials";
+@import "components/post-tiles";
+@import "components/all-audits";
+@import "components/modal";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

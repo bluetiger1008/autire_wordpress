@@ -1,5 +1,11 @@
 .hero {
-	height: 250px;
+	height: 600px;
+	.testimonials & {
+		height: 250px;
+	}
+	.audits & {
+		height: 250px;
+	}
 	position: relative;
 	background-position: center;
 	background-size: cover;

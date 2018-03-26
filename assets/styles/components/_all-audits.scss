@@ -1,0 +1,123 @@
+.pg-audit {
+	padding: 100px 0;
+	min-height: calc(100vh - 370px);
+	section.audit-accordian {
+	  width: 100%;
+	  border-radius: 3px;
+	  overflow: hidden;
+	}
+	section.audit-accordian > accordian-header {
+	  color: #fff;
+	  background: #1e7b1e;
+	  text-align: center;
+	  line-height: 1.2em;
+	}
+	section > section {
+	  border-bottom: 1px solid #d6f5d6;
+	}
+	section > section:last-child {
+	  border: none;
+	}
+	section > div {
+	  height: 0;
+	  overflow: hidden;
+	  transition: all .2s ease-in;
+	}
+	section button {
+	  position: absolute;
+	  right: 10px;
+	  margin: 0;
+	  padding: 0;
+	  height: 50px;
+	  width: 50px;
+	  outline: 0;
+	  border: 0;
+	  background: none;
+	  text-indent: -9999%;
+	  pointer-events: none;
+	}
+	section button:after, section button:before {
+	  content: '';
+	  display: block;
+	  position: absolute;
+	  height: 12px;
+	  width: 4px;
+	  border-radius: .3em;
+	  background: #ed5527;
+	  transform-origin: 50%;
+	  top: 50%;
+	  left: 50%;
+	  transition: all .3s ease-in-out;
+	}
+	section button:after {
+	  transform: translate(-75%, -50%) rotate(-45deg);
+	}
+	section button:before {
+	  transform: translate(75%, -50%) rotate(45deg);
+	}
+	section.open button:after, section.open button:before {
+	  height: 14px;
+	  background: #ed5527;
+	}
+	section.open button:after {
+	  transform: translate(0%, -50%) rotate(45deg);
+	}
+	section.open button:before {
+	  transform: translate(0%, -50%) rotate(-45deg);
+	}
+	section.open accordian-header {
+	  background: #213566;
+	  h4 {
+	  	color: #fff;
+	  }
+	  &:hover {
+	  	background: #213566;
+	  	h4 {
+	  		color: #fff;	
+	  	}
+	  }
+	}
+
+	accordian-article,
+	accordian-header {
+	  line-height: 1em;
+	  display: block;
+	  padding: 0 20px;
+	}
+
+	accordian-header:not(.title) {
+	  width: 100%;
+	  overflow: hidden;
+	  height: 50px;
+	  background: white;
+	  cursor: pointer;
+	  color: #888;
+	  white-space: nowrap;
+	  text-overflow: ellipsis;
+	  display: flex;
+	  align-items: center;
+	  h4 {
+	  	margin: 0;
+	  }
+	}
+	accordian-article {
+		padding: 10px 20px;
+		color: black;
+		ul {
+			li {
+				font-family: 'Open Sans';
+			}
+		}
+	}
+	accordian-header:not(.title):hover {
+	  background: #4a5673;
+	  h4 {
+	  	color: #fff;
+	  }
+	}
+
+	accordian-article {
+		line-height: 1.5em;
+	  background: rgba(255, 255, 255, 0.7);
+	}
+}
